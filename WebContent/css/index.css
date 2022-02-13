@@ -1,0 +1,290 @@
+@charset "UTF-8";
+
+/*폰트*/
+@font-face {
+    font-family: 'DOSGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*폰트*/
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#header-inner {
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+header {
+    height: 50px;
+    width: 1200px;
+    margin: auto;
+}
+
+.h-logo {
+    width: 200px;
+    height: 50px;
+    float: left;
+}
+
+.nav {
+    width: 600px;
+    height: 50px;
+    float: right;
+}
+
+.nav > div {
+    height: 25px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: block;
+    width: 23%;
+    text-align: center;
+    font-family: DOSGothic;
+    padding: 3.5px;
+    float: left;
+}
+
+.menu li:hover {
+    border-bottom: 1.5px solid green;
+    color: green;
+    margin-top: 1px;
+}
+
+.login {
+    list-style: none;
+    padding: 0;
+    float: right;
+    margin: 4.5px;
+}
+
+.login li {
+    display: block;
+    font-size: 14px;
+    float: left;
+    text-align: center;
+    font-family: DOSGothic;
+    padding: 0 5px;
+    cursor: pointer;
+    -ms-user-select: none; 
+  	-moz-user-select: -moz-none;
+  	-khtml-user-select: none;
+ 	-webkit-user-select: none;
+  	user-select: none;
+    display: none;
+}
+
+.open-login, .login-out {
+    border-right: 1px solid gray;
+}
+
+.login li:hover {
+    border-bottom: 1.5px solid black;
+}
+#footer-inner{
+    width: 100%;
+    min-width: 1200px;
+    background-color: #191814;
+    height: 150px;
+}
+footer{
+    width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+footer > div{
+    float: left;
+}
+.copy{
+    width: 1000px;
+    height: 150px;
+    color: white;
+    font-family: DOSGothic;
+    font-size: 20px;
+}
+.sns{
+    width: 200px;
+    height: 75px;
+}    
+.sns a > img{
+    width: 40px;
+    margin: 11px;
+}
+.f-logo{
+    width: 200px;
+    height: 75px;
+}
+.f-logo > img{
+    margin: 12px 0;
+}
+
+/*로그인*/
+.login-modal{
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1200px;
+    height: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+.login-content{
+    text-align: center;
+    border: 1px solid black;
+    background-color: #fff;
+    width: 301px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.login-content > h2{
+    font-family: DOSGothic;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.login-content > input{
+    font-family: DOSGothic;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid black;
+}
+.login-content > p{
+    padding: 0;
+    margin: 0;
+    color: gray;
+    font-size: 12px;
+    font-family: DOSGothic;
+    margin-top: 3px;
+}
+.login-content > div{
+    width: 114px;
+    margin: auto;
+}
+/*로그인*/
+
+/*회원가입*/
+.join-modal{
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1200px;
+    height: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+.join-content{
+    border: 1px solid black;
+    background-color: #fff;
+    width: 301px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.join-content > h2{
+    text-align: center;
+    font-family: DOSGothic;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.join-content > input{
+    font-family: DOSGothic;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid black;
+}
+.join-content > p{
+    padding: 0;
+    margin: 0;
+    color: gray;
+    font-size: 12px;
+    font-family: DOSGothic;
+    margin-top: 3px;
+}
+.join-content > div{
+    width: 98px;
+    margin: auto;
+}
+
+/*회원가입*/
+
+/*회원가입*/
+.info-modal{
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1200px;
+    height: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+.info-content{
+    border: 1px solid black;
+    background-color: #fff;
+    width: 301px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.info-content > h2{
+    text-align: center;
+    font-family: DOSGothic;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.info-content > p{
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-size: 17px;
+    font-family: DOSGothic;
+    margin-top: 3px;
+}
+.info-content > div{
+    width: 42px;
+    margin: auto;
+}
+
+/*회원가입*/
+
+#btn{
+    cursor: pointer;
+    background-color: white;
+    font-family: DOSGothic;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid black;
+}
+#n{
+    color: white;
+}

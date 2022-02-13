@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodeByte</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-inner">
+            <header>
+                <div class="h-logo">
+                    <a href="./index.html"><img src="images/h-logo.png" alt="h-logo"></a>
+                </div>
+                <div class="nav">
+                    <div>
+                        <ul class="login">
+                            <li class="open-login">로그인</li>
+                            <li class="open-join">회원가입</li>
+                            <li class="login-out">로그아웃</li>
+                            <li class="open-info">내 정보</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="menu">
+                            <a href="./question.html">
+                                <li>
+                                    <b>문제</b>
+                                </li>
+                            </a>
+                            <a href="./custom_question.html">
+                                <li>
+                                    <b>커스텀 문제</b>
+                                </li>
+                            </a>
+                            <a href="./question_log.html">
+                                <li>
+                                    <b>채점 현황</b>
+                                </li>
+                            </a>
+                            <a href="./rank.html">
+                                <li>
+                                    <b>랭킹</b>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div id="content-inner">
+            <div id="slide">
+                <div>
+                    <img src="images/slide_01.jpg" alt="slide_01">
+                    <img src="images/slide_02.jpg" alt="slide_02">
+                    <img src="images/slide_03.jpg" alt="slide_03">
+                </div>
+                <p class="easter_egg_1">
+                    > Resolved Issues.
+                </p>
+                <p class="easter_egg_2">
+                    > 0 point
+                </p>
+                <p class="easter_egg_2">
+                    > Skills are proportional to time.
+                </p>
+            </div>
+            <div id="contents">
+                <div class="rank">
+                    <h3>Top3</h3>
+                    <div>
+                        <p class="top_1 top">Test_name1</p>
+                        <p>TOP 1</p>
+                        <p class="point p_1">(100 point)</p>
+                    </div>
+                    <div>
+                        <p class="top_2 top">Test_name2</p>
+                        <p>TOP 2</p>
+                        <p class="point p_2">(95 point)</p>
+                    </div>
+                    <div>
+                        <p class="top_3 top">Test_nam3</p>
+                        <p>TOP 3</p>
+                        <p class="point p_3">(90 point)</p>
+                    </div>
+                </div>
+                <div class="updates">
+                    <h3>Update List</h3>
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+            <div id="banner-inner">
+                <div class="banner">
+                    <div>
+                        <p class="banner_number Basic">0</p>
+                        <p class="banner_text">기본 문제</p>
+                    </div>
+                    <div>
+                        <p class="banner_number Custom">0</p>
+                        <p class="banner_text">커스텀 문제</p>
+                    </div>
+                    <div>
+                        <p class="banner_number User">0</p>
+                        <p class="banner_text">회원</p>
+                    </div>
+                </div>
+            </div>
+            <div class="saying">
+                <div>
+                    <p class="saying_title">Saying</p>
+                    <p class="saying_text">
+                        Our greatest weakness lies in giving up.<br>
+                        The most certain way to succeed is<br>
+                        always to try just one more time.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="footer-inner">
+            <footer>
+                <div class="copy">
+                    <p>
+                        Developer : Seon Woo Ju<br>
+                        Email : tjsdnwn21104@gmail.com<br>
+                        <br>
+                        <br>
+                        <b>알고리즘 문제를 풀면 컴퓨터가 채점을 해주는 웹 페이지입니다.</b>
+                    </p>
+                </div>
+                <div>
+                    <div class="f-logo">
+                        <img src="images/f-logo.png" alt="f-logo">
+                    </div>
+                    <div class="sns">
+                        <a href="#none"><img src="images/logo_facebook.png" alt="logo_facebook"></a>
+                        <a href="#none"><img src="images/logo_instagram.png" alt="logo_instagram"></a>
+                        <a href="#none"><img src="images/logo_youtube.png" alt="logo_youtube"></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!--  로그인  -->
+    <div class="login-modal">
+        <div class="login-content">
+            <h2>로그인</h2>
+            <input type="text" id="Id" maxlength="15" placeholder="아이디">
+            <input type="password" id="Pw" size="20" maxlength="15" placeholder="비밀번호">
+            <p id="n"><b>.</b></p>
+            <div>
+                <input type="button" class="close-login" value="닫기" id="btn">
+                <input type="submit" onclick="Login_Check_Value();" value="로그인" id="btn">
+            </div>
+        </div>
+    </div>
+    <!--  로그인  -->
+
+    <!--  회원가입  -->
+    <div class="join-modal">
+        <div class="join-content">
+            <h2>회원가입</h2>
+            <input type="text" id="Id" maxlength="15" placeholder="아이디">
+            <input type="button" onclick="Id_Ck();" value="중복확인" id="btn">
+            <p><b>아이디는 5~15자 사이로 해주시기 바랍니다.</b></p>
+            <input type="password" id="Pw" size="20" maxlength="15" placeholder="비밀번호">
+            <input type="password" id="Pw_Ck" size="20" maxlength="15" placeholder="비밀번호 확인">
+            <p><b>비밀번호는 5~20자 사이로 해주시기 바랍니다.</b></p>
+            <input type="text" id="Name" maxlength="10" placeholder="이름">
+            <p><b>이름은 2~10자 사이로 해주시기 바랍니다.</b></p>
+            <input type="email" id="Email" placeholder="이메일">
+            <p id="n"><b>.</b></p>
+            <div>
+                <input type="button" class="close-join" value="닫기" id="btn">
+                <input type="button" onclick="Join_Check_Value();" value="가입" id="btn">
+            </div>
+        </div>
+    </div>
+    <!--  회원가입  -->
+    
+    <!--  내 정보  -->
+    <div class="info-modal">
+        <div class="info-content">
+            <h2>내 정보</h2>
+            <p class="name">이름 : null</p>
+            <p class="id">아이디 : null</p>
+            <p class="email">이메일 null</p>
+            <div>
+                <input type="button" class="close-info" value="닫기" id="btn">
+            </div>
+        </div>
+    </div>
+    <!--  내 정보  -->
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="script/Login_Join.js"></script>
+    <script type="text/javascript" src="script/index.js"></script>
+
+</body>
+
+</html>

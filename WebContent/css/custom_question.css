@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+#content-inner {}
+
+#contents {
+    max-width: 1200px;
+    min-height: 950px;
+    margin: auto;
+}
+
+#contents > h1 {
+    text-align: center;
+    margin: 10px;
+    font-family: DOSGothic;
+}
+
+.question {
+    width: 800px;
+    margin: auto;
+    font-family: DOSGothic;
+    text-align: center;
+    font-size: 17px;
+    border-collapse: collapse;
+}
+
+tr {
+    height: 28px;
+    font-size:
+}
+
+tr:first-child {
+    border: none;
+    border-bottom: 1px solid black;
+    color: white;
+    background-color: black
+}
+
+th {
+    border-left: 1px solid white;
+}
+
+th:nth-child(1),
+th:nth-child(3),
+th:nth-child(4) {
+    width: 100px;
+}
+
+td:first-child {
+    font-size: 24px;
+}
+
+/*문제*/
+.solve-modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1200px;
+    height: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+
+.solve-content {
+    border: 1px solid black;
+    background-color: #fff;
+    width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.solve-content > h2 {
+    text-align: center;
+    font-family: DOSGothic;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.solve-content > p {
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-size: 17px;
+    font-family: DOSGothic;
+    margin-top: 3px;
+}
+
+.solve-content > div {
+    width: 114px;
+    margin: auto;
+}
+.solve-modal .solve-content > .rr{
+    color: red;
+    text-align: center;
+}
+#cod{
+    width: 450px;
+}
+.code {
+    margin-top: 3px;
+    width: 450px;
+    height: 250px;
+    resize: none;
+}
+/*문제*/
+
+/*문제추가*/
+.add-modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1200px;
+    height: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+
+.add-content {
+    border: 1px solid black;
+    background-color: #fff;
+    width: 460px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: DOSGothic;
+    font-size: 17px;
+}
+.add-content > h2 {
+    text-align: center;
+    font-family: DOSGothic;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.add-content > p {
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-size: 17px;
+    font-family: DOSGothic;
+    margin-top: 3px;
+}
+.add-content p > b{
+    padding: 0;
+    margin: 0;
+    color: gray;
+    font-size: 12px;
+    font-family: DOSGothic;
+    margin-top: 3px;
+}
+
+.add-content > div {
+    width: 114px;
+    margin: auto;
+}
+
+/*문제추가*/
+
+.add{
+    width:102px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+.add-content > .title{
+    width: 350px;
+}
+.add-content > .text{
+    resize: none;
+    width: 410px;
+    height: 60px;
+}
+.add-content > .in_out{
+    width: 290px;
+    margin-top: 2px;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodeByte</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom_question.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-inner">
+            <header>
+                <div class="h-logo">
+                    <a href="./index.html"><img src="images/h-logo.png" alt="h-logo"></a>
+                </div>
+                <div class="nav">
+                    <div>
+                        <ul class="login">
+                            <li class="open-login">로그인</li>
+                            <li class="open-join">회원가입</li>
+                            <li class="login-out">로그아웃</li>
+                            <li class="open-info">내 정보</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="menu">
+                            <a href="./question.html">
+                                <li>
+                                    <b>문제</b>
+                                </li>
+                            </a>
+                            <a href="./custom_question.html">
+                                <li>
+                                    <b>커스텀 문제</b>
+                                </li>
+                            </a>
+                            <a href="./question_log.html">
+                                <li>
+                                    <b>채점 현황</b>
+                                </li>
+                            </a>
+                            <a href="./rank.html">
+                                <li>
+                                    <b>랭킹</b>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div id="content-inner">
+            <div id="contents">
+                <h1>커스텀 문제</h1>
+                <div class="add">
+                    <input type="button" class="open-add" value="문제 만들기" id="btn">
+                </div>
+                <table class="question">
+                    <tr>
+                        <th>번호</th><th>제목</th><th>점수</th><th>풀기</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="footer-inner">
+            <footer>
+                <div class="copy">
+                    <p>
+                        Developer : Seon Woo Ju<br>
+                        Email : tjsdnwn21104@gmail.com<br>
+                        <br>
+                        <br>
+                        <b>알고리즘 문제를 풀면 컴퓨터가 채점을 해주는 웹 페이지입니다.</b>
+                    </p>
+                </div>
+                <div>
+                    <div class="f-logo">
+                        <img src="images/f-logo.png" alt="f-logo">
+                    </div>
+                    <div class="sns">
+                        <a href="#none"><img src="images/logo_facebook.png" alt="logo_facebook"></a>
+                        <a href="#none"><img src="images/logo_instagram.png" alt="logo_instagram"></a>
+                        <a href="#none"><img src="images/logo_youtube.png" alt="logo_youtube"></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    
+    
+    <!--  문제추가  -->
+    <div class="add-modal">
+        <div class="add-content">
+            제목 : <input type="text" class="title" maxlength="25">
+            <p><b>제목은 5~25자 사이로 해주시기 바랍니다.</b></p>
+            <p>설명</p>
+            <textarea class="text" maxlength="220"></textarea>
+            <p><b>설명은 10~220자 사이로 해주시기 바랍니다.</b></p>
+            입력 데이터형 : <input type="radio" name="data_type" value="0" checked>int</input>
+            <input type="radio" name="data_type" value="1" checked>String</input><br>
+            1차 입력 값 : <input type="text" class="in_1 in_out" maxlength="20"><br>
+            1차 출력 값 : <input type="text" class="out_1 in_out" maxlength="20"><br>
+            2차 입력 값 : <input type="text" class="in_2 in_out" maxlength="20"><br>
+            2차 출력 값 : <input type="text" class="out_2 in_out" maxlength="20"><br>
+            <p><b>입출력 값은 1~20자 사이로 해주시기 바랍니다.</b></p>
+            <p id="n"><b>.</b></p>
+            <div class="btns">
+                <input type="button" class="close-add" value="닫기" id="btn">
+                <input type="button" onclick="Add_Check_Value();" value="추가" id="btn">
+            </div>
+        </div>
+    </div>
+    <!--  문제추가  -->
+   
+   <!--  문제  -->
+    <div class="solve-modal">
+        <div class="solve-content">
+            <h2 class="title"></h2>
+            <p class="text"></p>
+            <p class="in"></p>
+            <p class="out"></p>
+            <div id="cod">
+                <textarea class="code"></textarea>
+            </div>
+            <p class="rr">출력은 System.out.print()으로만 하시오.</p>
+            <div class="btns">
+                <input type="button" class="close-solve" value="닫기" id="btn">
+                <input type="button" onclick="" value="컴파일" id="btn">
+            </div>
+        </div>
+    </div>
+    <!--  문제  -->
+   
+    <!--  로그인  -->
+    <div class="login-modal">
+        <div class="login-content">
+            <h2>로그인</h2>
+            <input type="text" id="Id" maxlength="15" placeholder="아이디">
+            <input type="password" id="Pw" size="20" maxlength="15" placeholder="비밀번호">
+            <p id="n"><b>.</b></p>
+            <div>
+                <input type="button" class="close-login" value="닫기" id="btn">
+                <input type="submit" onclick="Login_Check_Value();" value="로그인" id="btn">
+            </div>
+        </div>
+    </div>
+    <!--  로그인  -->
+
+    <!--  회원가입  -->
+    <div class="join-modal">
+        <div class="join-content">
+            <h2>회원가입</h2>
+            <input type="text" id="Id" maxlength="15" placeholder="아이디">
+            <input type="button" onclick="Id_Ck();" value="중복확인" id="btn">
+            <p><b>아이디는 5~15자 사이로 해주시기 바랍니다.</b></p>
+            <input type="password" id="Pw" size="20" maxlength="15" placeholder="비밀번호">
+            <input type="password" id="Pw_Ck" size="20" maxlength="15" placeholder="비밀번호 확인">
+            <p><b>비밀번호는 5~20자 사이로 해주시기 바랍니다.</b></p>
+            <input type="text" id="Name" maxlength="10" placeholder="이름">
+            <p><b>이름은 2~10자 사이로 해주시기 바랍니다.</b></p>
+            <input type="email" id="Email" placeholder="이메일">
+            <p id="n"><b>.</b></p>
+            <div>
+                <input type="button" class="close-join" value="닫기" id="btn">
+                <input type="button" onclick="Join_Check_Value();" value="가입" id="btn">
+            </div>
+        </div>
+    </div>
+    <!--  회원가입  -->
+    
+    <!--  내 정보  -->
+    <div class="info-modal">
+        <div class="info-content">
+            <h2>내 정보</h2>
+            <p class="name">이름 : null</p>
+            <p class="id">아이디 : null</p>
+            <p class="email">이메일 null</p>
+            <div>
+                <input type="button" class="close-info" value="닫기" id="btn">
+            </div>
+        </div>
+    </div>
+    <!--  내 정보  -->
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="script/Login_Join.js"></script>
+    <script type="text/javascript" src="script/custom_question.js"></script>
+    <script type="text/javascript" src="script/Login_ch.js"></script>
+
+</body>
+
+</html>

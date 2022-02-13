@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+#content-inner{
+    width: 100%;
+}
+#slide{
+    margin-top: 1px;
+    max-width: 100%;
+    min-width: 1200px;
+    overflow: hidden;
+    height: 594.69px;
+    background-color: #191814;
+}
+.easter_egg_1{
+    font-family: DOSGothic;
+    margin: 0;
+    margin-top: 430px;
+    color: greenyellow;
+    text-align: center;
+    font-size: 30px;
+}
+.easter_egg_2{
+    font-family: DOSGothic;
+    margin: 0;
+    margin-top: 10px;
+    color: greenyellow;
+    text-align: center;
+    font-size: 30px;
+}
+#slide > div{
+    position: relative;
+    font-size: 0;
+}
+#slide > div img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slide 10s linear infinite;
+    visibility: hidden;
+    max-width: 100%;
+    min-width: 1200px;
+    
+}
+#slide > div img:nth-child(1){animation-delay: 0s;}
+#slide > div img:nth-child(2){animation-delay: 3.5s;}
+#slide > div img:nth-child(3){animation-delay: 7s;}
+@keyframes slide{
+    0%{opacity: 0;}
+    5%{opacity: 1; visibility: visible;}
+    35%{opacity: 1;}
+    40%{opacity: 0; visibility: hidden;}
+    100%{opacity: 0;}
+}
+#contents{
+    height: 230px;
+    margin: 50px auto;
+    overflow: hidden;
+    width: 1200px;
+    font-family: DOSGothic;
+}
+#contents > div{
+    height: 230px;
+    width: 450px;
+    margin: 0 60px;
+}
+.updates{
+    float: right;
+}
+.updates > h3{
+    margin: 0;
+    padding: 5px 0;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+.updates > ul{
+    margin: 0;
+    padding: 0 10px;
+    list-style: none;
+}
+.updates ul li > n{
+    float: right;
+}
+.rank{
+    float: left;
+}
+.rank > h3{
+    margin: 0;
+    padding: 5px 0;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+.rank > div{
+    width: 33.3333%;
+    text-align: center;
+    float: left;
+}
+.top{
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+.top_1{
+    
+/*   	margin-top: 20px;*/
+}
+.top_2{
+/*    margin-top: 60px;*/
+}
+.top_3{
+/*    margin-top: 100px;*/
+}
+.point{
+    margin: 0;
+}
+#banner-inner{
+    overflow: hidden;
+    width: 100%;
+    min-width: 1200px;
+    height: 200px;
+    background-color: #191814;
+}
+.banner{
+    width: 1200px;
+    margin: auto;
+    height: 200px;
+}
+.banner > div{
+    float: left;
+    text-align: center;
+    border: 1px solid white;
+    color: white;
+    width: 350px;
+    height: 150px;
+    margin: 24px;
+    font-family: DOSGothic;
+}
+.banner_number, .banner_text{
+    margin: 0;
+}
+.banner_number{
+    margin: 20px 0;
+    font-size: 50px;
+}
+.banner_text{
+    font-size: 25px;
+}
+.saying{
+    width: 1200px;
+    margin: auto;
+    height: 300px;
+    text-align: center;
+}
+.saying > div{
+    width: 700px;
+    margin: auto;
+    padding: 60px 0;
+}
+.saying_title, .saying_text{
+    margin: 0;
+    font-family: DOSGothic;
+    
+    padding: 10px 0;
+}
+.saying_title{
+    border-bottom: 1px solid black;
+    font-size: 35px;
+    
+}
+.saying_text{
+    font-size: 30px;
+}

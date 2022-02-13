@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+#content-inner {}
+
+#contents {
+    max-width: 1200px;
+    min-height: 950px;
+    margin: auto;
+}
+
+#contents > h1 {
+    text-align: center;
+    margin: 10px;
+    font-family: DOSGothic;
+}
+
+.rank {
+    width: 800px;
+    margin: auto;
+    font-family: DOSGothic;
+    text-align: center;
+    font-size: 17px;
+    border-collapse: collapse;
+}
+
+tr {
+    height: 28px;
+    font-size:
+}
+
+tr:first-child {
+    border: none;
+    border-bottom: 1px solid black;
+    color: white;
+    background-color: black
+}
+
+th {
+    border-left: 1px solid white;
+}
+
+th:first-child,
+th:last-child {
+    width: 100px;
+}
+
+td:first-child {
+    font-size: 24px;
+}
