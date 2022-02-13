@@ -15,3 +15,4 @@ This is Online Jersey, which was produced as a project at Bundang Management Hig
 * 기본 문제 개수 (basic number of questions)
 * 커스텀 문제 개수 (custom number of questions)
 * 숫자 출력 문제 컴파일 (number print questions comfile)
+* 이스터 에그: 해결된 문제 (easter egg: resolved issues)
